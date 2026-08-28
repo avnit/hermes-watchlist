@@ -1,0 +1,31 @@
+{
+  "topics": ["Antigravity", "Hermes"],
+  "youtube": {
+    "comment": "Requires a YouTube Data API v3 key in the YOUTUBE_API_KEY env var. Add channel IDs you want fully indexed, and/or search terms. Both are used.",
+    "channel_ids": [],
+    "search_terms": [
+      "Google Antigravity IDE",
+      "Antigravity agent coding",
+      "Hermes AI agent",
+      "Hermes LLM"
+    ],
+    "max_results_per_query": 25
+  },
+  "podcasts": {
+    "comment": "Add podcast RSS feed URLs. Every episode is pulled; items are kept only if the title/description matches one of the topics (unless keep_all is true for that feed).",
+    "feeds": [
+      { "name": "Example Dev Podcast", "rss": "https://example.com/feed.xml", "keep_all": false }
+    ]
+  },
+  "websites": {
+    "comment": "Web pages listing talks/articles/videos. Provide a URL and a CSS selector for the links to extract. Leave selector empty to grab all <a> tags on the page.",
+    "pages": [
+      { "name": "Antigravity Blog", "url": "https://example.com/antigravity", "link_selector": "a" }
+    ]
+  },
+  "match": {
+    "comment": "An item is tagged with a topic if any of these regexes (case-insensitive) hit its title or description.",
+    "Antigravity": ["antigravity", "anti-gravity"],
+    "Hermes": ["hermes"]
+  }
+}

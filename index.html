@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antigravity &amp; Hermes — Watch Next</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">▶</span>
+      <div>
+        <h1>Watch Next</h1>
+        <p class="sub">Antigravity &amp; Hermes — YouTube, podcasts &amp; the web</p>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button data-view="next" class="active">Up Next</button>
+      <button data-view="browse">Browse</button>
+      <button data-view="library">Library</button>
+      <button data-view="stats">Stats</button>
+    </nav>
+  </header>
+
+  <main id="app">
+    <!-- Filters -->
+    <section class="filters" id="filters">
+      <div class="filter-group" id="topic-filters"></div>
+      <div class="filter-group" id="source-filters"></div>
+    </section>
+
+    <!-- Up Next -->
+    <section id="view-next" class="view active">
+      <div id="next-card-wrap"></div>
+      <h3 class="section-label" id="queue-label">In your queue</h3>
+      <div id="queue-list" class="grid"></div>
+    </section>
+
+    <!-- Browse -->
+    <section id="view-browse" class="view">
+      <div id="browse-list" class="grid"></div>
+    </section>
+
+    <!-- Library (watched) -->
+    <section id="view-library" class="view">
+      <div id="review-banner"></div>
+      <div id="library-list" class="grid"></div>
+    </section>
+
+    <!-- Stats -->
+    <section id="view-stats" class="view">
+      <div id="stats-body"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span id="data-meta"></span>
+    <button id="reset-btn" class="link-btn" title="Clear your watched/liked history on this device">Reset my history</button>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

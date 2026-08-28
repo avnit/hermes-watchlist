@@ -1,0 +1,66 @@
+{
+  "generated_at": "seed",
+  "note": "Seed data with real search links so the app is usable before you run the fetcher. Run scripts/fetch_media.py to replace this with live YouTube / podcast / website items.",
+  "items": [
+    {
+      "id": "seed-yt-antigravity-overview",
+      "title": "Google Antigravity — overview & first look",
+      "source": "youtube",
+      "creator": "YouTube search",
+      "topics": ["Antigravity"],
+      "url": "https://www.youtube.com/results?search_query=Google+Antigravity+IDE+overview",
+      "published_at": "2025-11-20",
+      "duration_seconds": null,
+      "description": "Curated YouTube search for introductions and first-look walkthroughs of Google Antigravity.",
+      "is_example": true
+    },
+    {
+      "id": "seed-yt-antigravity-agents",
+      "title": "Building with Antigravity agents",
+      "source": "youtube",
+      "creator": "YouTube search",
+      "topics": ["Antigravity"],
+      "url": "https://www.youtube.com/results?search_query=Antigravity+agent+coding+tutorial",
+      "published_at": "2025-12-01",
+      "duration_seconds": null,
+      "description": "Curated YouTube search for hands-on tutorials using Antigravity's agent workflows.",
+      "is_example": true
+    },
+    {
+      "id": "seed-yt-hermes-intro",
+      "title": "Hermes — what it is and how it works",
+      "source": "youtube",
+      "creator": "YouTube search",
+      "topics": ["Hermes"],
+      "url": "https://www.youtube.com/results?search_query=Hermes+AI+agent+explained",
+      "published_at": "2025-10-15",
+      "duration_seconds": null,
+      "description": "Curated YouTube search for explainers on Hermes.",
+      "is_example": true
+    },
+    {
+      "id": "seed-pod-hermes-deepdive",
+      "title": "Podcast: a deep dive on Hermes",
+      "source": "podcast",
+      "creator": "Podcast search",
+      "topics": ["Hermes"],
+      "url": "https://podcasts.google.com/search/Hermes%20AI",
+      "published_at": "2025-11-05",
+      "duration_seconds": null,
+      "description": "Curated podcast search for long-form Hermes discussions.",
+      "is_example": true
+    },
+    {
+      "id": "seed-web-antigravity-docs",
+      "title": "Antigravity — official docs & articles",
+      "source": "website",
+      "creator": "Web search",
+      "topics": ["Antigravity"],
+      "url": "https://www.google.com/search?q=Google+Antigravity+documentation",
+      "published_at": "2025-11-18",
+      "duration_seconds": null,
+      "description": "Curated web search for official Antigravity documentation and write-ups.",
+      "is_example": true
+    }
+  ]
+}
