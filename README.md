@@ -56,9 +56,13 @@ Two things stop a single platform dominating:
    podcasts are first-class sources with their own fetchers, and the aggregator
    runs them before YouTube.
 2. **A variety nudge in the ranking.** Once you have a little history, sources
-   you've consumed *less* than average get a small score bump, so bingeing one
-   platform pushes the rest of your queue toward the others. It's a nudge, not
-   an override — a source you keep 👍-ing still wins.
+   you've consumed *less* than average get a score bump, so bingeing one platform
+   pushes the rest of your queue toward the others. The bump scales with how much
+   history you've built (capped), because source affinity grows with every rating
+   — a fixed-size nudge gets swamped after two or three likes and stops doing
+   anything. Consume evenly and the term is ~0 whatever you rate, so it only
+   bites when your history is genuinely lopsided, and it tilts rather than
+   vetoes: a source you keep 👍-ing still wins.
 
 The **Stats** tab shows both: what the catalog is made of, and what you actually
 consume.
@@ -116,15 +120,34 @@ YouTube in the mix.
 
 ## Tests
 
-The aggregator's parsing, filtering and ranking are covered by offline tests —
-each source's HTTP layer is stubbed with a recorded-shape payload, so they run
-anywhere with no network:
+**Aggregator** — parsing, topic matching, filtering and de-duplication. Each
+source's HTTP layer is stubbed with a recorded-shape payload, so these run
+anywhere with no network, and they also assert the shipped `data/catalog.json`
+stays loadable by the app:
 
 ```bash
-python3 scripts/test_fetch_media.py
+python3 scripts/test_fetch_media.py     # stdlib only
 ```
 
-They also assert the shipped `data/catalog.json` stays loadable by the app.
+**Web app** — the six views, the per-source sort orders, the read → rate →
+recommend loop, and the variety nudge, driven in a real Chromium page:
+
+```bash
+node scripts/test_app_browser.js
+```
+
+Playwright is an **optional** dev dependency — this repo otherwise needs no
+third-party packages, so if it isn't installed the browser suite reports
+`SKIPPED` and exits 0 rather than failing. To enable it:
+
+```bash
+npm i -D playwright && npx playwright install chromium
+```
+
+The variety nudge is verified against a purpose-built catalog (equal items per
+source, one topic, one date) rather than the shipped one, because the shipped
+catalog's topic and recency signals swamp it — a test that passes whether or not
+the feature exists is worse than no test.
 
 ## Hosting (GitHub Pages)
 
@@ -146,8 +169,9 @@ data/
   sources.json      # where to look + topic-matching rules  (you edit this)
   catalog.json      # aggregated items the app reads         (fetcher writes this)
 scripts/
-  fetch_media.py    # papers + Hacker News + web + podcast + YouTube aggregator (stdlib only)
+  fetch_media.py       # papers + Hacker News + web + podcast + YouTube aggregator (stdlib only)
   test_fetch_media.py  # offline tests for the aggregator
+  test_app_browser.js  # browser smoke tests (Playwright optional)
   serve.sh          # convenience local server
 .github/workflows/
   pages.yml         # deploys to GitHub Pages

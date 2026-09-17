@@ -125,13 +125,23 @@
     if (ca) { s += ca * 1.5; if (ca > 0) reasons.push(`from ${item.creator}`); }
     s += recencyScore(item) * 1.2;
 
-    // Variety: nudge toward the sources you've consumed least, so whichever
+    // Variety: steer toward the sources you've consumed least, so whichever
     // platform you binge (usually video) doesn't take over the whole queue.
+    //
+    // `variety` is how far this source sits from an even split: positive when
+    // you've had less of it than average, negative when you've had more. It is
+    // scaled by how much history you've built up, because source affinity above
+    // grows +1 per rating without bound — a fixed-size nudge gets swamped after
+    // two or three likes and stops doing anything at all. The scale is capped so
+    // a long history doesn't turn a nudge into a veto.
+    //
+    // Consume evenly and this term is ~0 whatever you rate, so it only bites
+    // when your history is genuinely lopsided.
     if (taste.watchedTotal >= 3) {
       const avg = taste.watchedTotal / SOURCES.length;
       const seen = taste.watchedBySource[item.source] || 0;
       const variety = (avg - seen) / (avg + 1);
-      s += variety * 0.8;
+      s += variety * (1 + Math.min(taste.watchedTotal, 12) * 0.4);
       if (variety > 0.25) reasons.push("a change from your usual sources");
     }
     return { s, reasons };
