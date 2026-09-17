@@ -1,65 +1,516 @@
 {
   "generated_at": "seed",
-  "note": "Seed data with real search links so the app is usable before you run the fetcher. Run scripts/fetch_media.py to replace this with live YouTube / podcast / website items.",
+  "note": "Seed catalog. Papers carry real Hugging Face titles, dates and upvote counts; web links are real published posts. Items flagged is_example are placeholders - run scripts/fetch_media.py to replace them with live items and to fill in Hacker News points, comment counts and outbound article links.",
+  "counts": {
+    "hackernews": 10,
+    "paper": 10,
+    "website": 7,
+    "podcast": 1,
+    "youtube": 2
+  },
   "items": [
     {
-      "id": "seed-yt-antigravity-overview",
-      "title": "Google Antigravity — overview & first look",
-      "source": "youtube",
-      "creator": "YouTube search",
-      "topics": ["Antigravity"],
-      "url": "https://www.youtube.com/results?search_query=Google+Antigravity+IDE+overview",
-      "published_at": "2025-11-20",
+      "id": "hn-48903272",
+      "title": "Hermes Agent maker Nous Research in talks for new funding at $1.5B valuation",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/",
+      "published_at": "2026-07-13",
       "duration_seconds": null,
-      "description": "Curated YouTube search for introductions and first-look walkthroughs of Google Antigravity.",
+      "description": "TechCrunch on Nous Research's funding talks, as discussed on Hacker News.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=48903272"
+      },
       "is_example": true
     },
     {
-      "id": "seed-yt-antigravity-agents",
-      "title": "Building with Antigravity agents",
-      "source": "youtube",
-      "creator": "YouTube search",
-      "topics": ["Antigravity"],
-      "url": "https://www.youtube.com/results?search_query=Antigravity+agent+coding+tutorial",
-      "published_at": "2025-12-01",
+      "id": "paper-2607.05471",
+      "title": "KAT-Coder-V2.5 Technical Report",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://huggingface.co/papers/2607.05471",
+      "published_at": "2026-07-06",
       "duration_seconds": null,
-      "description": "Curated YouTube search for hands-on tutorials using Antigravity's agent workflows.",
-      "is_example": true
+      "description": "KAT-Coder-V2.5 is an agentic coding model trained via scalable sandboxed environment reconstruction, process-aware trajectory filtering and reinforcement learning with asymmetric actor-critic optimization.",
+      "extra": {
+        "paper_id": "2607.05471",
+        "upvotes": 13,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2607.05471"
+      }
     },
     {
-      "id": "seed-yt-hermes-intro",
-      "title": "Hermes — what it is and how it works",
-      "source": "youtube",
-      "creator": "YouTube search",
-      "topics": ["Hermes"],
-      "url": "https://www.youtube.com/results?search_query=Hermes+AI+agent+explained",
-      "published_at": "2025-10-15",
+      "id": "paper-2603.19974",
+      "title": "Trojan's Whisper: Stealthy Manipulation of OpenClaw through Injected Bootstrapped Guidance",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://huggingface.co/papers/2603.19974",
+      "published_at": "2026-03-20",
       "duration_seconds": null,
-      "description": "Curated YouTube search for explainers on Hermes.",
-      "is_example": true
+      "description": "Autonomous coding agents face a stealthy attack vector called guidance injection, where adversarial narratives in bootstrap files manipulate agent behaviour without detection.",
+      "extra": {
+        "paper_id": "2603.19974",
+        "upvotes": 0,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2603.19974"
+      }
     },
     {
-      "id": "seed-pod-hermes-deepdive",
-      "title": "Podcast: a deep dive on Hermes",
-      "source": "podcast",
-      "creator": "Podcast search",
-      "topics": ["Hermes"],
-      "url": "https://podcasts.google.com/search/Hermes%20AI",
-      "published_at": "2025-11-05",
+      "id": "paper-2603.05344",
+      "title": "Building AI Coding Agents for the Terminal: Scaffolding, Harness, Context Engineering, and Lessons Learned",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://huggingface.co/papers/2603.05344",
+      "published_at": "2026-03-05",
       "duration_seconds": null,
-      "description": "Curated podcast search for long-form Hermes discussions.",
-      "is_example": true
+      "description": "OPENDEV is an open-source command-line coding agent that provides autonomous software engineering assistance through specialized model routing, dual-agent architecture and efficient context management.",
+      "extra": {
+        "paper_id": "2603.05344",
+        "upvotes": 7,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2603.05344"
+      }
     },
     {
-      "id": "seed-web-antigravity-docs",
-      "title": "Antigravity — official docs & articles",
-      "source": "website",
-      "creator": "Web search",
-      "topics": ["Antigravity"],
-      "url": "https://www.google.com/search?q=Google+Antigravity+documentation",
+      "id": "paper-2602.04226",
+      "title": "Why Agentic-PRs Get Rejected: A Comparative Study of Coding Agents",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://huggingface.co/papers/2602.04226",
+      "published_at": "2026-02-04",
+      "duration_seconds": null,
+      "description": "Analysis of rejected pull requests from multiple coding agents reveals agent-specific failure patterns and highlights challenges in determining rejection reasons without explicit reviewer feedback.",
+      "extra": {
+        "paper_id": "2602.04226",
+        "upvotes": 0,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2602.04226"
+      }
+    },
+    {
+      "id": "hn-45967814",
+      "title": "Google Antigravity",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://antigravity.google/",
       "published_at": "2025-11-18",
       "duration_seconds": null,
-      "description": "Curated web search for official Antigravity documentation and write-ups.",
+      "description": "The launch thread for Google's agentic development platform, discussed on Hacker News.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=45967814"
+      },
+      "is_example": true
+    },
+    {
+      "id": "web-ag-introducing",
+      "title": "Introducing Google Antigravity, a New Era in AI-Assisted Software Development",
+      "source": "website",
+      "creator": "Google Antigravity Blog",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://antigravity.google/blog/introducing-google-antigravity",
+      "published_at": "2025-11-18",
+      "duration_seconds": null,
+      "description": "The launch post: an agentic development platform built around trust, autonomy, feedback and self-improvement.",
+      "extra": {}
+    },
+    {
+      "id": "paper-2508.18255",
+      "title": "Hermes 4 Technical Report",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://huggingface.co/papers/2508.18255",
+      "published_at": "2025-08-25",
+      "duration_seconds": null,
+      "description": "Hermes 4, a hybrid reasoning model, integrates structured multi-turn reasoning with broad instruction-following, evaluated across math, coding, knowledge, comprehension and alignment benchmarks.",
+      "extra": {
+        "paper_id": "2508.18255",
+        "upvotes": 57,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2508.18255"
+      }
+    },
+    {
+      "id": "paper-2508.11126",
+      "title": "AI Agentic Programming: A Survey of Techniques, Challenges, and Opportunities",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://huggingface.co/papers/2508.11126",
+      "published_at": "2025-08-15",
+      "duration_seconds": null,
+      "description": "AI agentic programming involves LLMs autonomously managing software development tasks through planning, tool integration and feedback, addressing challenges like context handling and safety.",
+      "extra": {
+        "paper_id": "2508.11126",
+        "upvotes": 0,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2508.11126"
+      }
+    },
+    {
+      "id": "paper-2507.15003",
+      "title": "The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://huggingface.co/papers/2507.15003",
+      "published_at": "2025-07-20",
+      "duration_seconds": null,
+      "description": "AIDev, a large-scale dataset, captures autonomous coding agents' operations in real-world software development, providing empirical data for studying AI-native workflows and human-AI collaboration.",
+      "extra": {
+        "paper_id": "2507.15003",
+        "upvotes": 1,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2507.15003"
+      }
+    },
+    {
+      "id": "paper-2505.19443",
+      "title": "Vibe Coding vs. Agentic Coding: Fundamentals and Practical Implications of Agentic AI",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://huggingface.co/papers/2505.19443",
+      "published_at": "2025-05-26",
+      "duration_seconds": null,
+      "description": "A review contrasts vibe coding and agentic coding paradigms, highlighting their differences in interaction, autonomy and application areas in AI-assisted software development.",
+      "extra": {
+        "paper_id": "2505.19443",
+        "upvotes": 15,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2505.19443"
+      }
+    },
+    {
+      "id": "paper-2502.12148",
+      "title": "HermesFlow: Seamlessly Closing the Gap in Multimodal Understanding and Generation",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://huggingface.co/papers/2502.12148",
+      "published_at": "2025-02-17",
+      "duration_seconds": null,
+      "description": "HermesFlow aligns multimodal understanding and generation through homologous preference data, demonstrating superior performance compared to existing methods.",
+      "extra": {
+        "paper_id": "2502.12148",
+        "upvotes": 17,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2502.12148"
+      }
+    },
+    {
+      "id": "paper-2408.11857",
+      "title": "Hermes 3 Technical Report",
+      "source": "paper",
+      "creator": "",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://huggingface.co/papers/2408.11857",
+      "published_at": "2024-08-15",
+      "duration_seconds": null,
+      "description": "Hermes 3, a neutrally-aligned instruct and tool use model with strong reasoning and creative capabilities, achieves top performance on public benchmarks.",
+      "extra": {
+        "paper_id": "2408.11857",
+        "upvotes": 60,
+        "authors": [],
+        "arxiv_url": "https://arxiv.org/abs/2408.11857"
+      }
+    },
+    {
+      "id": "hn-48222529",
+      "title": "Google's Antigravity bait and switch",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://news.ycombinator.com/item?id=48222529",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Hacker News discussion. Run the fetcher to pull the live points, comment count and outbound article link.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=48222529"
+      },
+      "is_example": true
+    },
+    {
+      "id": "hn-48204497",
+      "title": "Well, there is no IDE in Antigravity 2.0",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://news.ycombinator.com/item?id=48204497",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Hacker News discussion. Run the fetcher to pull the live points, comment count and outbound article link.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=48204497"
+      },
+      "is_example": true
+    },
+    {
+      "id": "hn-48196838",
+      "title": "Google Antigravity 2.0",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://news.ycombinator.com/item?id=48196838",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Hacker News discussion. Run the fetcher to pull the live points, comment count and outbound article link.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=48196838"
+      },
+      "is_example": true
+    },
+    {
+      "id": "hn-46028329",
+      "title": "Google's Antigravity IDE sparks forking debate",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://news.ycombinator.com/item?id=46028329",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Hacker News discussion. Run the fetcher to pull the live points, comment count and outbound article link.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=46028329"
+      },
+      "is_example": true
+    },
+    {
+      "id": "hn-45037064",
+      "title": "Hermes 4",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://news.ycombinator.com/item?id=45037064",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Hacker News discussion. Run the fetcher to pull the live points, comment count and outbound article link.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=45037064"
+      },
+      "is_example": true
+    },
+    {
+      "id": "hn-45031326",
+      "title": "Nous Research - Hermes 4 405B/70B released",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://news.ycombinator.com/item?id=45031326",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Hacker News discussion. Run the fetcher to pull the live points, comment count and outbound article link.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=45031326"
+      },
+      "is_example": true
+    },
+    {
+      "id": "hn-48419000",
+      "title": "Hermes Agent - open-source AI agent with persistent memory",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://news.ycombinator.com/item?id=48419000",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Hacker News discussion. Run the fetcher to pull the live points, comment count and outbound article link.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=48419000"
+      },
+      "is_example": true
+    },
+    {
+      "id": "hn-47264225",
+      "title": "NousResearch/hermes-agent: the agent that grows with you",
+      "source": "hackernews",
+      "creator": "",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://news.ycombinator.com/item?id=47264225",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Hacker News discussion. Run the fetcher to pull the live points, comment count and outbound article link.",
+      "extra": {
+        "discussion_url": "https://news.ycombinator.com/item?id=47264225"
+      },
+      "is_example": true
+    },
+    {
+      "id": "web-ag-devblog-build",
+      "title": "Build with Google Antigravity, our new agentic development platform",
+      "source": "website",
+      "creator": "Google Developers Blog",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Google Developers Blog walkthrough of the Editor View, the Manager Surface and Artifacts.",
+      "extra": {}
+    },
+    {
+      "id": "web-ag-enterprise",
+      "title": "Bringing Antigravity to Gemini Enterprise: agentic workflows for every developer",
+      "source": "website",
+      "creator": "Google Antigravity Blog",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://antigravity.google/blog/antigravity-enterprise",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "How the agentic development platform lands inside Gemini Enterprise.",
+      "extra": {}
+    },
+    {
+      "id": "web-ag-io-2026",
+      "title": "Google Antigravity @ I/O 2026",
+      "source": "website",
+      "creator": "Google Antigravity Blog",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://antigravity.google/blog/google-io-2026",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "What shipped for the agentic development platform at I/O 2026.",
+      "extra": {}
+    },
+    {
+      "id": "web-ag-cli-transition",
+      "title": "An important update: transitioning Gemini CLI to Antigravity CLI",
+      "source": "website",
+      "creator": "Google Developers Blog",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "The Gemini CLI to Antigravity CLI transition, straight from the Developers Blog.",
+      "extra": {}
+    },
+    {
+      "id": "web-ag-wikipedia",
+      "title": "Google Antigravity (Wikipedia)",
+      "source": "website",
+      "creator": "Wikipedia",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://en.wikipedia.org/wiki/Google_Antigravity",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Background, release history and reception for the agentic development platform.",
+      "extra": {}
+    },
+    {
+      "id": "web-nous-blog",
+      "title": "Nous Research - blog",
+      "source": "website",
+      "creator": "Nous Research",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://nousresearch.com/blog",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Release notes and announcements for the Hermes model and agent line.",
+      "extra": {}
+    },
+    {
+      "id": "seed-pod-latent-space",
+      "title": "Latent Space: The AI Engineer Podcast",
+      "source": "podcast",
+      "creator": "Latent Space",
+      "topics": [
+        "Antigravity",
+        "Hermes"
+      ],
+      "url": "https://www.latent.space/podcast",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Long-form interviews on agentic coding and open-weight models. The fetcher reads this feed and keeps the episodes that match your topics.",
+      "extra": {},
+      "is_example": true
+    },
+    {
+      "id": "seed-yt-antigravity",
+      "title": "Google Antigravity - walkthroughs and first looks",
+      "source": "youtube",
+      "creator": "YouTube search",
+      "topics": [
+        "Antigravity"
+      ],
+      "url": "https://www.youtube.com/results?search_query=Google+Antigravity+agentic+development+platform",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Curated YouTube search. Set YOUTUBE_API_KEY and run the fetcher to replace this with real videos.",
+      "extra": {},
+      "is_example": true
+    },
+    {
+      "id": "seed-yt-hermes",
+      "title": "Hermes - explainers and agent demos",
+      "source": "youtube",
+      "creator": "YouTube search",
+      "topics": [
+        "Hermes"
+      ],
+      "url": "https://www.youtube.com/results?search_query=Nous+Research+Hermes+agent+demo",
+      "published_at": null,
+      "duration_seconds": null,
+      "description": "Curated YouTube search. Set YOUTUBE_API_KEY and run the fetcher to replace this with real videos.",
+      "extra": {},
       "is_example": true
     }
   ]

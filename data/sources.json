@@ -1,31 +1,85 @@
 {
   "topics": ["Antigravity", "Hermes"],
+
   "youtube": {
-    "comment": "Requires a YouTube Data API v3 key in the YOUTUBE_API_KEY env var. Add channel IDs you want fully indexed, and/or search terms. Both are used.",
+    "comment": "Optional. Requires a YouTube Data API v3 key in the YOUTUBE_API_KEY env var. YouTube is now one source among five - leave search_terms empty to drop video entirely.",
+    "enabled": true,
     "channel_ids": [],
     "search_terms": [
-      "Google Antigravity IDE",
-      "Antigravity agent coding",
-      "Hermes AI agent",
-      "Hermes LLM"
+      "Google Antigravity agentic development platform",
+      "Antigravity IDE walkthrough",
+      "Nous Research Hermes model",
+      "Hermes agent demo"
     ],
     "max_results_per_query": 25
   },
+
+  "papers": {
+    "comment": "Research papers from Hugging Face Papers (https://huggingface.co/papers). Public API, no key or account needed. 'queries' are full-text searches; 'include_daily' also sweeps the Daily Papers feed and keeps anything that matches a topic.",
+    "enabled": true,
+    "queries": [
+      "Hermes technical report open weights",
+      "agentic coding agent software engineering",
+      "autonomous coding agent IDE",
+      "long-term memory personal agent",
+      "tool use function calling LLM agent"
+    ],
+    "max_results_per_query": 12,
+    "min_upvotes": 0,
+    "include_daily": true,
+    "daily_limit": 50
+  },
+
+  "hackernews": {
+    "comment": "Latest blogs and articles surfaced on Hacker News, via the public Algolia API (no key). 'blogs_only' keeps stories that link out to an article and drops Ask/Tell HN text posts. Sorted newest-first at the source.",
+    "enabled": true,
+    "queries": [
+      "Antigravity",
+      "Nous Research Hermes",
+      "agentic IDE",
+      "coding agent"
+    ],
+    "hits_per_query": 20,
+    "min_points": 5,
+    "blogs_only": true,
+    "max_age_days": 540
+  },
+
   "podcasts": {
-    "comment": "Add podcast RSS feed URLs. Every episode is pulled; items are kept only if the title/description matches one of the topics (unless keep_all is true for that feed).",
+    "comment": "Podcast RSS feeds. Every episode is pulled; items are kept only if the title/description matches a topic, unless keep_all is true for that feed.",
     "feeds": [
-      { "name": "Example Dev Podcast", "rss": "https://example.com/feed.xml", "keep_all": false }
+      { "name": "Latent Space: The AI Engineer Podcast", "rss": "https://api.substack.com/feed/podcast/1084089.rss", "keep_all": false },
+      { "name": "Practical AI", "rss": "https://changelog.com/practicalai/feed", "keep_all": false }
     ]
   },
+
   "websites": {
-    "comment": "Web pages listing talks/articles/videos. Provide a URL and a CSS selector for the links to extract. Leave selector empty to grab all <a> tags on the page.",
+    "comment": "Blogs and docs to scrape links from. Provide a URL and a CSS-ish hint for the links to extract (the scraper reads all <a> tags and keeps the ones whose text matches a topic).",
     "pages": [
-      { "name": "Antigravity Blog", "url": "https://example.com/antigravity", "link_selector": "a" }
+      { "name": "Google Antigravity Blog", "url": "https://antigravity.google/blog", "link_selector": "a" },
+      { "name": "Google Developers Blog", "url": "https://developers.googleblog.com/", "link_selector": "a" },
+      { "name": "Nous Research Blog", "url": "https://nousresearch.com/blog", "link_selector": "a" },
+      { "name": "Hugging Face Blog", "url": "https://huggingface.co/blog", "link_selector": "a" }
     ]
   },
+
   "match": {
-    "comment": "An item is tagged with a topic if any of these regexes (case-insensitive) hit its title or description.",
-    "Antigravity": ["antigravity", "anti-gravity"],
-    "Hermes": ["hermes"]
+    "comment": "An item is tagged with a topic if any of that topic's regexes (case-insensitive) hit its title or description. Anything matching 'exclude' is dropped first - 'Hermes' is a busy word.",
+    "Antigravity": [
+      "antigravity",
+      "anti-gravity",
+      "agentic (ide|development|coding|programming|software)",
+      "coding agent",
+      "autonomous software engineer"
+    ],
+    "Hermes": [
+      "hermes",
+      "nous ?research"
+    ],
+    "exclude": [
+      "herm[eè]s (paris|international|birkin|kelly|scarf|handbag|bag|store|boutique)",
+      "hermes (parcel|delivery|courier|logistics|shipping|europe|uk)",
+      "birkin"
+    ]
   }
 }

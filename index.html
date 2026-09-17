@@ -12,11 +12,13 @@
       <span class="logo">▶</span>
       <div>
         <h1>Watch Next</h1>
-        <p class="sub">Antigravity &amp; Hermes — YouTube, podcasts &amp; the web</p>
+        <p class="sub">Antigravity &amp; Hermes — papers, blogs, podcasts &amp; video</p>
       </div>
     </div>
     <nav class="tabs" id="tabs">
       <button data-view="next" class="active">Up Next</button>
+      <button data-view="papers">Papers</button>
+      <button data-view="hn">Hacker News</button>
       <button data-view="browse">Browse</button>
       <button data-view="library">Library</button>
       <button data-view="stats">Stats</button>
@@ -35,6 +37,26 @@
       <div id="next-card-wrap"></div>
       <h3 class="section-label" id="queue-label">In your queue</h3>
       <div id="queue-list" class="grid"></div>
+    </section>
+
+    <!-- Research papers (Hugging Face) -->
+    <section id="view-papers" class="view">
+      <div class="view-intro">
+        <h2>Research papers</h2>
+        <p>From <a href="https://huggingface.co/papers" target="_blank" rel="noopener">Hugging Face Papers</a>,
+           most-upvoted first. Each card links to the Hugging Face page and to the arXiv preprint.</p>
+      </div>
+      <div id="papers-list" class="grid"></div>
+    </section>
+
+    <!-- Latest blogs on Hacker News -->
+    <section id="view-hn" class="view">
+      <div class="view-intro">
+        <h2>Latest blogs on Hacker News</h2>
+        <p>Stories that link out to a blog post or article, newest first. Each card
+           opens the article, with a second link to the Hacker News discussion.</p>
+      </div>
+      <div id="hn-list" class="grid"></div>
     </section>
 
     <!-- Browse -->
